@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MfnManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MfnManagerApplication.class, args);
+		SpringApplication.run(MfnManagerJavaFXApplication.class, args);
 	}
 
 }

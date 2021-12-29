@@ -96,3 +96,5 @@ modules.xml
 
 # Sonarlint plugin
 .idea/sonarlint
+/.idea/
+/target/
