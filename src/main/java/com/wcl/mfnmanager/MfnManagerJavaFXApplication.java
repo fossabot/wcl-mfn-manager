@@ -1,12 +1,12 @@
 package com.wcl.mfnmanager;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Objects;
 
 @SpringBootApplication
 public class MfnManagerJavaFXApplication extends Application {
@@ -22,8 +22,8 @@ public class MfnManagerJavaFXApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        var helloFxPane = new Pane(new Label("Hello JavaFx"));
-        primaryStage.setScene(new Scene(helloFxPane));
+        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/main/main.fxml")));
+        primaryStage.setTitle("MFN Manager");
         primaryStage.show();
     }
 
