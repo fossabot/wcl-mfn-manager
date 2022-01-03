@@ -1,18 +1,16 @@
-package com.wcl.mfnmanager;
+package com.wcl.mfnmanager.ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Objects;
 
-@SpringBootApplication
-public class MfnManagerJavaFXApplication extends Application {
+public class MfnManagerUIApplication extends Application {
 
     public static void main(String[] args) {
-        Application.launch();
+        launch();
     }
 
     @Override
@@ -26,5 +24,4 @@ public class MfnManagerJavaFXApplication extends Application {
         primaryStage.setTitle("MFN Manager");
         primaryStage.show();
     }
-
 }
