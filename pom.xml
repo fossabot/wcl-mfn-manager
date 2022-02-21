@@ -17,13 +17,12 @@
 
     <groupId>com.wcl</groupId>
     <artifactId>mfnmanager</artifactId>
-    <version>${app.version}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>mfnmanager</name>
     <description>MFN Manager application served via Spring boot</description>
 
     <properties>
         <java.version>17</java.version>
-        <app.version>0.0.1-SNAPSHOT</app.version>
     </properties>
 
     <dependencies>
