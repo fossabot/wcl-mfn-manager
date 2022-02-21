@@ -7,6 +7,9 @@
     <modules>
         <module>entities</module>
         <module>ui</module>
+        <module>services</module>
+        <module>communications</module>
+        <module>parsers</module>
     </modules>
 
     <parent>
