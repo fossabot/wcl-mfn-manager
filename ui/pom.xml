@@ -9,8 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.wcl.mfnmanager</groupId>
     <artifactId>ui</artifactId>
-    <version>${app.version}</version>
+    <version>0.0.1-SNAPSHOT</version>
+
 
     <properties>
         <java.version>17</java.version>
@@ -35,5 +37,14 @@
             <version>${java.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
