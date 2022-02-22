@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.StatusBar?>
+<BorderPane minHeight="650.0" minWidth="1000.0"
+            xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.wcl.mfnmanager.ui.controller.main.MainController">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu mnemonicParsing="false" text="File">
+                    <MenuItem fx:id="closeAction" mnemonicParsing="false" onAction="#handleCloseAction" text="Close"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Draft">
+                    <MenuItem id="draftDownloadAction" mnemonicParsing="false" onAction="#handleDownloadDraftClassesAction" text="Download available Draft Classes"/>
+                    <MenuItem id="draftViewAction" mnemonicParsing="false" onAction="#handleViewDraftClassAction" text="View Draft Class"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tools">
+                    <MenuItem id="contractCalculatorAction" mnemonicParsing="false"
+                              onAction="#handleContractCalculatorAction"
+                              text="Contract Calculator"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <MenuItem text="Manual" onAction="#handleManualAction" />
+                    <MenuItem text="About" onAction="#handleAboutAction"/>
+                </Menu>
+            </MenuBar>
+        </VBox>
+    </top>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.wcl.mfnmanager.ui.controller.MainController"
-            prefHeight="800.0" prefWidth="1200.0">
-
-</AnchorPane>
+    <center>
+        <StackPane fx:id="display"/>
+    </center>
+    <bottom>
+        <StatusBar fx:id="statusBar"/>
+    </bottom>
+</BorderPane>

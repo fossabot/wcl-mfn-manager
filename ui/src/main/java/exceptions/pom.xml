@@ -10,25 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wcl.mfnmanager</groupId>
-    <artifactId>communications</artifactId>
+    <artifactId>exceptions</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.httpcomponents.client5</groupId>
-            <artifactId>httpclient5</artifactId>
-            <version>5.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.wcl.mfnmanager</groupId>
-            <artifactId>exceptions</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 
 </project>

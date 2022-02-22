@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.wcl.mfnmanager.ui.controller.contract.ContractCalculatorController">
+    <top>
+
+        <GridPane >
+                <Label text="Minimum Salary" GridPane.columnIndex="0" GridPane.rowIndex="0" textAlignment="RIGHT"/>
+                <TextField fx:id="minSalary"  GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Required Bonus"  GridPane.columnIndex="0" GridPane.rowIndex="1"  textAlignment="RIGHT"/>
+                <TextField fx:id="requiredBonus"  GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="calculateButton" mnemonicParsing="false"
+                        GridPane.columnIndex="2" GridPane.rowIndex="0"
+                        GridPane.rowSpan="2" GridPane.fillHeight="true"
+                        onAction="#calculateContractOffer" text="Calculate"/>
+        </GridPane>
+    </top>
+
+    <center>
+        <VBox>
+            <Label text="Contract Yearly Salaries"/>
+            <HBox spacing="5">
+<!--                <VBox>-->
+                    <TabPane tabClosingPolicy="UNAVAILABLE">
+                        <Tab text="1 Yr deal">
+                            <AnchorPane>
+                                <TableView fx:id="oneYearDealSalaryTable">
+                                    <columns>
+                                        <TableColumn fx:id="oneYearDealYearColumn" minWidth="55.0" text="Year"/>
+                                        <TableColumn fx:id="oneYearDealSalaryColumn" minWidth="112.0" text="Salary"/>
+                                        <TableColumn fx:id="oneYearDealBonusColumn" minWidth="159.0" text="Bonus"/>
+                                        <TableColumn fx:id="oneYearDealTotalColumn" minWidth="145.0" text="Total"/>
+                                    </columns>
+                                </TableView>
+                            </AnchorPane>
+                        </Tab>
+                        <Tab text="2 Yr deal">
+                            <AnchorPane>
+                                <TableView fx:id="twoYearDealSalaryTable">
+                                    <columns>
+                                        <TableColumn fx:id="twoYearDealYearColumn" minWidth="55.0" text="Year"/>
+                                        <TableColumn fx:id="twoYearDealSalaryColumn" minWidth="112.0" text="Salary"/>
+                                        <TableColumn fx:id="twoYearDealBonusColumn" minWidth="159.0" text="Bonus"/>
+                                        <TableColumn fx:id="twoYearDealTotalColumn" minWidth="145.0" text="Total"/>
+                                    </columns>
+                                </TableView>
+                            </AnchorPane>
+                        </Tab>
+                        <Tab text="3 Yr deal">
+                            <AnchorPane>
+                                <TableView fx:id="threeYearDealSalaryTable">
+                                    <columns>
+                                        <TableColumn fx:id="threeYearDealYearColumn" minWidth="55.0" text="Year"/>
+                                        <TableColumn fx:id="threeYearDealSalaryColumn" minWidth="112.0" text="Salary"/>
+                                        <TableColumn fx:id="threeYearDealBonusColumn" minWidth="159.0" text="Bonus"/>
+                                        <TableColumn fx:id="threeYearDealTotalColumn" minWidth="145.0" text="Total"/>
+                                    </columns>
+                                </TableView>
+                            </AnchorPane>
+                        </Tab>
+                        <Tab text="4 Yr deal">
+                            <AnchorPane>
+                                <TableView fx:id="fourYearDealSalaryTable">
+                                    <columns>
+                                        <TableColumn fx:id="fourYearDealYearColumn" minWidth="55.0" text="Year"/>
+                                        <TableColumn fx:id="fourYearDealSalaryColumn" minWidth="112.0" text="Salary"/>
+                                        <TableColumn fx:id="fourYearDealBonusColumn" minWidth="159.0" text="Bonus"/>
+                                        <TableColumn fx:id="fourYearDealTotalColumn" minWidth="145.0" text="Total"/>
+                                    </columns>
+                                </TableView>
+                            </AnchorPane>
+                        </Tab>
+                        <Tab text="5 Yr deal">
+                            <AnchorPane>
+                                <TableView fx:id="fiveYearDealSalaryTable">
+                                    <columns>
+                                        <TableColumn fx:id="fiveYearDealYearColumn" minWidth="55.0" text="Year"/>
+                                        <TableColumn fx:id="fiveYearDealSalaryColumn" minWidth="112.0" text="Salary"/>
+                                        <TableColumn fx:id="fiveYearDealBonusColumn" minWidth="159.0" text="Bonus"/>
+                                        <TableColumn fx:id="fiveYearDealTotalColumn" minWidth="145.0" text="Total"/>
+                                    </columns>
+                                </TableView>
+                            </AnchorPane>
+                        </Tab>
+                        <Tab text="6 Yr deal">
+                            <AnchorPane>
+                                <TableView fx:id="sixYearDealSalaryTable">
+                                    <columns>
+                                        <TableColumn fx:id="sixYearDealYearColumn" minWidth="55.0" text="Year"/>
+                                        <TableColumn fx:id="sixYearDealSalaryColumn" minWidth="112.0" text="Salary"/>
+                                        <TableColumn fx:id="sixYearDealBonusColumn" minWidth="159.0" text="Bonus"/>
+                                        <TableColumn fx:id="sixYearDealTotalColumn" minWidth="145.0" text="Total"/>
+                                    </columns>
+                                </TableView>
+                            </AnchorPane>
+                        </Tab>
+                    </TabPane>
+<!--                </VBox>-->
+<!--                <VBox>-->
+                    <TableView fx:id="salaryTable">
+                        <columns>
+                            <TableColumn fx:id="salaryYears" minWidth="51.0" text="Years"/>
+                            <TableColumn fx:id="salaryTotalSalary" minWidth="111.0" text="Total Salary"/>
+                            <TableColumn fx:id="salaryBonusPerYear" minWidth="106.0" text="Bonus / Year"/>
+                            <TableColumn fx:id="salaryTotal" minWidth="89.0" text="Total"/>
+                            <TableColumn fx:id="salaryTotalPerYear" minWidth="130.0" text="Total / Year"/>
+                        </columns>
+                    </TableView>
+<!--                </VBox>-->
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

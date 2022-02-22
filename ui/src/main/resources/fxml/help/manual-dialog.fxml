@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ This project is licensed under the Apache 2.0  license.
+  ~  
+  ~  For details see the LICENSE file which can be found at the base of this project archive.
+  -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<TitledPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wcl.mfnmanager.ui.controller.main.help.ManualController"
+            text="About - Current version 0.1">
+    <BorderPane>
+        <center>
+            <Pagination fx:id="pagination"/>
+        </center>
+        <bottom>
+            <HBox alignment="CENTER">
+                <Button onAction="#handleCloseManualDialog">Close</Button>
+            </HBox>
+        </bottom>
+    </BorderPane>
+</TitledPane>

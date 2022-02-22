@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.wcl.mfnmanager.ui.controller.draft.DraftClassController">
+    <top>
+        <VBox>
+            <HBox>
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10"/>
+                </padding>
+                <Button fx:id="chooseDirectory" mnemonicParsing="false" onAction="#handleDraftFileDirectory"
+                        text="Select Draft Class"/>
+                <Label fx:id="draftClassInfo" text="No Draft Class selected"/>
+            </HBox>
+            <HBox>
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10"/>
+                </padding>
+                <Label text="Position"/>
+                <ChoiceBox prefWidth="150.0" fx:id="draftClassChoiceBox"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="playerTable">
+            <columns>
+                <TableColumn prefWidth="45.0" text="ID" fx:id="id"/>
+                <TableColumn prefWidth="140.0" text="NAME" fx:id="name"/>
+                <TableColumn prefWidth="40.0" text="HGT" fx:id="height"/>
+                <TableColumn prefWidth="40.0" text="WGT" fx:id="weight"/>
+                <TableColumn prefWidth="40.0" text="POS" fx:id="assignedPosition"/>
+                <TableColumn text="POT">
+                    <columns>
+                        <TableColumn prefWidth="40.0" text="C" fx:id="currentOA"/>
+                        <TableColumn prefWidth="40.0" text="F" fx:id="futureOA"/>
+                    </columns>
+                </TableColumn>
+                <TableColumn prefWidth="40.0" text="VOL" fx:id="volatility"/>
+                <TableColumn text="CORE">
+                    <columns>
+                        <TableColumn prefWidth="40.0" text="ACC" fx:id="acceleration"/>
+                        <TableColumn prefWidth="40.0" text="SPD" fx:id="maxSpeed"/>
+                        <TableColumn prefWidth="40.0" text="STR" fx:id="strength"/>
+                        <TableColumn prefWidth="40.0" text="INT" fx:id="intelligence"/>
+                        <TableColumn prefWidth="40.0" text="DIS" fx:id="discipline"/>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn fx:id="passingColumn" text="PASSING">
+                    <columns>
+                        <TableColumn text="PAC">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPassAccuracy"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePassAccuracy"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="HC">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentHardCount"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureHardCount"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="AS">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentArmStrength"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureArmStrength"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="PREL">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPassRelease"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePassRelease"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="LOD">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentLookOffDefence"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureLookOffDefence"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="SCR">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentScramblingSkill"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureScramblingSkill"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="FOV">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentFieldOfVision"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureFieldOfVision"/>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn fx:id="rushingColumn" text="RUSHING">
+                    <columns>
+                        <TableColumn text="BRK">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentBreakTackle"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureBreakTackle"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="CAR">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentBallCarrying"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureBallCarrying"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="AVF">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentAvoidFumble"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureAvoidFumble"/>
+                            </columns>
+                        </TableColumn>
+
+                    </columns>
+                </TableColumn>
+
+                <TableColumn fx:id="catchingColumn" text="CATCHING">
+                    <columns>
+                        <TableColumn text="CAT">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPassCatching"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePassCatching"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="BRA">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentBumpAndRunAvoidance"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureBumpAndRunAvoidance"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="RR">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentRouteRunning"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureRouteRunning"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="PRC">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPassReceptionCourage"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePassReceptionCourage"/>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn  fx:id="blockingColumn" text="BLOCKING">
+                    <columns>
+                        <TableColumn text="RUN">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentRunBlocking"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureRunBlocking"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="PASS">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPassBlocking"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePassBlocking"/>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn  fx:id="snappingColumn" text="SNAPPING">
+                    <columns>
+                        <TableColumn text="SHORT">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentShortSnapping"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureShortSnapping"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="LONG">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentLongSnapping"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureLongSnapping"/>
+                            </columns>
+                        </TableColumn>
+
+                    </columns>
+                </TableColumn>
+
+                <TableColumn fx:id="defenceColumn" text="DEFENCE">
+                    <columns>
+                        <TableColumn text="TCK">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentTackleAbility"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureTackleAbility"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="SB">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentStripBall"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureStripBall"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="40.0" text="PRSH">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPassRush"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePassRush"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="40.0" text="RUND">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentRunDefence"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureRunDefence"/>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn  fx:id="coverageColumn" text="COVERAGE">
+                    <columns>
+                        <TableColumn text="PREC">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPunishReceiver"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePunishReceiver"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="ZONE">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentZoneCoverage"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureZoneCoverage"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="M2M">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentManToManCoverage"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureManToManCoverage"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="B&amp;R">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentBumpAndRunCoverage"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureBumpAndRunCoverage"/>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn  fx:id="puntingColumn" text="PUNTING">
+                    <columns>
+                        <TableColumn text="PSTR">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPuntStrength"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePuntStrength"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="PACC">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPuntAccuracy"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePuntAccuracy"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="PTIM">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentPuntTiming"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futurePuntTiming"/>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn fx:id="kickingColumn" text="KICKING">
+                    <columns>
+                        <TableColumn text="KSTR">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentKickStrength"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureKickStrength"/>
+                            </columns>
+                        </TableColumn>
+                        <TableColumn text="KACC">
+                            <columns>
+                                <TableColumn prefWidth="40.0" text="C" fx:id="currentKickAccuracy"/>
+                                <TableColumn prefWidth="40.0" text="F" fx:id="futureKickAccuracy"/>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn fx:id="holderColumn" text="HOLDER">
+                    <columns>
+                        <TableColumn prefWidth="40.0" text="C" fx:id="currentKickHolding"/>
+                        <TableColumn prefWidth="40.0" text="F" fx:id="futureKickHolding"/>
+                    </columns>
+                </TableColumn>
+
+                <TableColumn  fx:id="returnerColumn" text="KICK CATCHING">
+                    <columns>
+                        <TableColumn prefWidth="40.0" text="C" fx:id="currentKickCatching"/>
+                        <TableColumn prefWidth="40.0" text="F" fx:id="futureKickCatching"/>
+                    </columns>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

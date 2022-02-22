@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ This project is licensed under the Apache 2.0  license.
+  ~  
+  ~  For details see the LICENSE file which can be found at the base of this project archive.
+  -->
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<TitledPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wcl.mfnmanager.ui.controller.main.help.AboutController"
+            text="About - Current version 0.1">
+    <BorderPane>
+        <center>
+            <VBox>
+                <HBox alignment="CENTER">
+                    <Label>0.1 - Basic Draft functionality and Contract calculator</Label>
+                </HBox>
+            </VBox>
+        </center>
+        <bottom>
+            <HBox alignment="CENTER">
+                <Button onAction="#handleCloseAboutDialog">Close</Button>
+            </HBox>
+        </bottom>
+    </BorderPane>
+</TitledPane>
