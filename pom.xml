@@ -35,6 +35,7 @@
         <maven.project.reports.plugin.version>3.1.0</maven.project.reports.plugin.version>
         <junit.version>5.6.0</junit.version>
         <mockito.version>3.8.0</mockito.version>
+        <jacoco.maven.plugin.version>0.8.7</jacoco.maven.plugin.version>
     </properties>
 
     <build>
@@ -79,6 +80,26 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.maven.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -104,6 +125,18 @@
                     <additionalOptions>-Xdoclint:none</additionalOptions>
                     <failOnError>false</failOnError>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <!-- select non-aggregate reports -->
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
         </plugins>
     </reporting>
